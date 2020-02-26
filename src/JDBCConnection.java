@@ -107,7 +107,6 @@ public class JDBCConnection {
          String line = "";
          while ((line = fileReader.readLine()) != null) {
 
-//                System.out.println(line);
              String[] row = line.replaceAll(",", " , ")
                      .split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
              String query = "insert into deliveries values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -140,7 +139,6 @@ public class JDBCConnection {
 
      }catch (Exception e)
      {
-//         System.out.println("Exception");
          e.printStackTrace();
      }
     }
